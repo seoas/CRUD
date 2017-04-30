@@ -1,6 +1,6 @@
-<form method="post" action="index.php">
-    <input type="text" placeholder="name" name="name">
-    <input type="text" placeholder="description" name="description">
-    <input type="date" placeholder="created_at" name="created_at">
-    <input type="submit">
-</form>
+<?php
+foreach ($rows as $el)
+{
+    echo $el['name'].' <a href="edit.php?id='.$el['id'].'">Edit</a>'.' <a href="delete.php?id='.$el['id'].'">Delete</a><br>';
+
+}
